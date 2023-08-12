@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SSuKSSuK-EUREKA/eureka.iml" filepath="$PROJECT_DIR$/SSuKSSuK-EUREKA/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSuKSSuK-GATEWAY/gateway.iml" filepath="$PROJECT_DIR$/SSuKSSuK-GATEWAY/gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/SSuKSSuK-HUB/hub.iml" filepath="$PROJECT_DIR$/SSuKSSuK-HUB/hub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSuKSSuK-UI/ui.iml" filepath="$PROJECT_DIR$/SSuKSSuK-UI/ui.iml" />
     </modules>
   </component>
 </project>
