@@ -48,6 +48,10 @@
         </dependencies>
     </dependencyManagement>
 
+    <modules>
+        <module>../SSuKSSuK-EUREKA</module>
+    </modules>
+
     <build>
         <plugins>
             <plugin>
