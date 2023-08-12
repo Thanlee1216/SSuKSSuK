@@ -52,6 +52,7 @@
     <modules>
         <module>../SSuKSSuK-EUREKA</module>
         <module>../SSuKSSuK-GATEWAY</module>
+        <module>../SSuKSSuK-UI</module>
     </modules>
 
     <build>
