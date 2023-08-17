@@ -11,6 +11,10 @@
         <option value="$PROJECT_DIR$/SSuKSSuK-EUREKA/pom.xml" />
         <option value="$PROJECT_DIR$/SSuKSSuK-GATEWAY/pom.xml" />
         <option value="$PROJECT_DIR$/SSuKSSuK-UI/pom.xml" />
+        <option value="$PROJECT_DIR$/SSuKSSuK-WS/pom.xml" />
+        <option value="$PROJECT_DIR$/SSukSSuk-OOTD/pom.xml" />
+        <option value="$PROJECT_DIR$/SSuKSSuK-BO/pom.xml" />
+        <option value="$PROJECT_DIR$/SSuKSSuK-NC/pom.xml" />
       </list>
     </option>
   </component>
