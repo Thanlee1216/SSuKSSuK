@@ -6,16 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SSuKSSuK-BO" />
-        <module name="SSuKSSuK-EUREKA" />
-        <module name="SSuKSSuK-WS" />
         <module name="ui" />
-        <module name="eureka" />
-        <module name="SSuKSSuK-GATEWAY" />
-        <module name="SSuKSSuK-NC" />
-        <module name="SSuKSSuK-UI" />
-        <module name="SSukSSuk-OOTD" />
         <module name="gateway" />
+        <module name="eureka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -24,25 +17,17 @@
       <module name="hub" target="1.8" />
       <module name="ssukssuk" target="1.8" />
       <module name="SSuKSSuK" target="1.5" />
-      <module name="SSuKSSuK-BO" target="1.8" />
       <module name="SSuKSSuK-EUREKA" target="1.8" />
       <module name="SSuKSSuK-GATEWAY" target="1.8" />
-      <module name="SSuKSSuK-NC" target="1.8" />
-      <module name="SSukSSuk-OOTD" target="1.8" />
       <module name="SSuKSSuK-UI" target="1.8" />
-      <module name="SSuKSSuK-WS" target="1.8" />
       <module name="ui" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="SSuKSSuK-BO" options="-parameters" />
       <module name="SSuKSSuK-EUREKA" options="-parameters" />
       <module name="SSuKSSuK-GATEWAY" options="-parameters" />
-      <module name="SSuKSSuK-NC" options="-parameters" />
       <module name="SSuKSSuK-UI" options="-parameters" />
-      <module name="SSuKSSuK-WS" options="-parameters" />
-      <module name="SSukSSuk-OOTD" options="-parameters" />
       <module name="eureka" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="ui" options="-parameters" />
