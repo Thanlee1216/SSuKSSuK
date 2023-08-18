@@ -80,7 +80,6 @@
           <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.4.14" />
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.15" />
           <element id="library" level="project" name="Maven: commons-configuration:commons-configuration:1.10" />
-          <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.6" />
           <element id="library" level="project" name="Maven: com.google.inject:guice:4.1.0" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
           <element id="library" level="project" name="Maven: org.codehaus.jettison:jettison:1.4.0" />
@@ -112,6 +111,8 @@
           <element id="library" level="project" name="Maven: org.glassfish.jaxb:txw2:2.3.3" />
           <element id="library" level="project" name="Maven: com.sun.istack:istack-commons-runtime:3.0.11" />
           <element id="library" level="project" name="Maven: com.sun.activation:jakarta.activation:1.2.2" />
+          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.20" />
+          <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.6" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter:2.4.2" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-logging:2.4.2" />
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.2.3" />

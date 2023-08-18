@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/SSuKSSuK-BO/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SSuKSSuK-EUREKA/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SSuKSSuK-GATEWAY/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/SSuKSSuK-HUB/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/SSuKSSuK-HUB/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SSuKSSuK-NC/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SSuKSSuK-UI/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SSuKSSuK-WS/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SSukSSuk-OOTD/src/main/java" charset="UTF-8" />
   </component>
 </project>
