@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SSuKSSuK-UI:war">
+    <output-path>$PROJECT_DIR$/SSuKSSuK-UI/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>SSuKSSuK-UI</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="SSuKSSuK-UI-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="SSuKSSuK-UI:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/SSuKSSuK-EUREKA/SSuKSSuK-EUREKA.iml" filepath="$PROJECT_DIR$/SSuKSSuK-EUREKA/SSuKSSuK-EUREKA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSuKSSuK-GATEWAY/SSuKSSuK-GATEWAY.iml" filepath="$PROJECT_DIR$/SSuKSSuK-GATEWAY/SSuKSSuK-GATEWAY.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSuKSSuK-UI/SSuKSSuK-UI.iml" filepath="$PROJECT_DIR$/SSuKSSuK-UI/SSuKSSuK-UI.iml" />
       <module fileurl="file://$PROJECT_DIR$/SSuKSSuK-EUREKA/eureka.iml" filepath="$PROJECT_DIR$/SSuKSSuK-EUREKA/eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/SSuKSSuK-GATEWAY/gateway.iml" filepath="$PROJECT_DIR$/SSuKSSuK-GATEWAY/gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/SSuKSSuK-HUB/hub.iml" filepath="$PROJECT_DIR$/SSuKSSuK-HUB/hub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSuKSSuK-HUB/ssukssuk.iml" filepath="$PROJECT_DIR$/SSuKSSuK-HUB/ssukssuk.iml" />
       <module fileurl="file://$PROJECT_DIR$/SSuKSSuK-UI/ui.iml" filepath="$PROJECT_DIR$/SSuKSSuK-UI/ui.iml" />
     </modules>
   </component>

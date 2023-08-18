@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gateway" />
         <module name="ui" />
+        <module name="gateway" />
         <module name="eureka" />
       </profile>
     </annotationProcessing>
@@ -15,12 +15,19 @@
       <module name="eureka" target="1.8" />
       <module name="gateway" target="1.8" />
       <module name="hub" target="1.8" />
+      <module name="ssukssuk" target="1.8" />
       <module name="SSuKSSuK" target="1.5" />
+      <module name="SSuKSSuK-EUREKA" target="1.8" />
+      <module name="SSuKSSuK-GATEWAY" target="1.8" />
+      <module name="SSuKSSuK-UI" target="1.8" />
       <module name="ui" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="SSuKSSuK-EUREKA" options="-parameters" />
+      <module name="SSuKSSuK-GATEWAY" options="-parameters" />
+      <module name="SSuKSSuK-UI" options="-parameters" />
       <module name="eureka" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="ui" options="-parameters" />
