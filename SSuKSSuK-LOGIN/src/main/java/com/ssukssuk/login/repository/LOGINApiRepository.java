@@ -1,11 +1,11 @@
-package com.ssukssuk.nc.repository;
+package com.ssukssuk.login.repository;
 
 import org.springframework.stereotype.Repository;
 
 import java.util.Map;
 
 @Repository
-public interface NCApiRepository {
+public interface LOGINApiRepository {
 
     Map<String, String> TEST();
 }
