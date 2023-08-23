@@ -34,4 +34,10 @@ public class UIController {
         logger.debug("request : resume");
         return "resume";
     }
+
+    @RequestMapping(value = "/login", method = {RequestMethod.GET, RequestMethod.POST})
+    public String login() {
+        logger.debug("request : login");
+        return "login/login";
+    }
 }
