@@ -16,7 +16,7 @@
 </head>
 <body>
 <div>
-    id : <input type="text" id="email">
+    &nbsp;id : <input type="text" id="email">
 </div>
 <div>
     pw : <input type="password" id="password">
