@@ -46,7 +46,17 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                     </ul>
                 </li>
                 <li><a href="elements.html">Elements</a></li>
-                <li><a href="/login" class="button primary">Sign Up</a></li>
+                <%
+                    if(!"true".equals((String) session.getAttribute("sessionInfo"))) {
+                %>
+                <li><a href="/login" class="button primary">Sign In</a></li>
+                <%
+                    }else {
+                %>
+                <li><a href="/logout" class="button primary">Sign Out</a></li>
+                <%
+                    }
+                %>
             </ul>
         </nav>
     </header>

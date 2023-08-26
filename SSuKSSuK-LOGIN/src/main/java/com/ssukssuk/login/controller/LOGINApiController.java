@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,12 +29,13 @@ public class LOGINApiController {
 
     @RequestMapping(value = "/loginAct", method = {RequestMethod.GET, RequestMethod.POST})
     public ResponseEntity<Map<String, String>> login(HttpServletRequest request, @RequestBody Map<String,String> param) {
+
         Map<String, String> resultMap = new HashMap<>();
         String email = param.get("email");
         String password = param.get("password");
 
         if("admin".equals(email) && "1234".equals(password)) {
-            resultMap.put("result", "ture");
+            resultMap.put("result", "true");
         }else {
             resultMap.put("result", "false");
         }
