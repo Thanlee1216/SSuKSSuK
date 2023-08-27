@@ -50,7 +50,7 @@ public class UIController {
     @RequestMapping(value = "/login", method = {RequestMethod.GET, RequestMethod.POST})
     public String login() {
         logger.debug("request : login");
-        return "login/login";
+        return "user/user";
     }
 
     @RequestMapping(value = "/logout", method = {RequestMethod.GET, RequestMethod.POST})

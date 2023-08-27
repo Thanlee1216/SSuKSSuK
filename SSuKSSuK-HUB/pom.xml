@@ -94,7 +94,7 @@
         <module>../SSuKSSuK-OOTD</module>
         <module>../SSuKSSuK-BO</module>
         <module>../SSuKSSuK-NC</module>
-        <module>../SSuKSSuK-LOGIN</module>
+        <module>../SSuKSSuK-USER</module>
     </modules>
 
     <build>

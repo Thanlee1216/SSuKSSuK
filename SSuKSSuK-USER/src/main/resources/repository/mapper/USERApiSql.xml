@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.ssukssuk.user.repository.USERApiRepository">
+
+
+    <select id="TEST" parameterType="hashmap" resultType="hashmap">
+        SELECT 'test' AS TEXT from DUAL
+    </select>
+
+    <select id="loginCheck" parameterType="String" resultType="hashmap">
+        SELECT COUNT(*) AS CNT_USER
+        FROM ssukssukDB.USER_INFO M
+        WHERE M.USER_ID = #{email}
+        AND M.PWD = #{password}
+    </select>
+
+    <insert id="INSERT" parameterType="LOGINApiVO">
+        INSERT INTO ssukssukDB.USER_INFO(
+            USER_ID
+            ,   PWD
+            ,   NAME
+        ) VALUES (
+            #{user_id}
+            ,   #{pwd}
+            ,   #{name}
+        )
+    </insert>
+</mapper>

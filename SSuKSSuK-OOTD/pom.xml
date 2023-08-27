@@ -9,8 +9,8 @@
 		<relativePath>../SSuKSSuK-HUB/pom.xml</relativePath> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ssukssuk</groupId>
-	<artifactId>SSukSSuk-OOTD</artifactId>
-	<name>SSukSSuk-OOTD</name>
+	<artifactId>SSuKSSuK-OOTD</artifactId>
+	<name>SSuKSSuK-OOTD</name>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
