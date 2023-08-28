@@ -19,8 +19,14 @@ public class WSApiController {
     WSApiService service;
 
     @RequestMapping(value = "/Health", method = {RequestMethod.GET, RequestMethod.POST})
-    public ResponseEntity<Map<String, String>> login(HttpServletRequest request) {
+    public ResponseEntity<Map<String, String>> health(HttpServletRequest request) {
         Map<String, String> resultMap = service.TEST();
+        return new ResponseEntity<Map<String, String>>(service.TEST(), HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/getWeather", method = {RequestMethod.GET, RequestMethod.POST})
+    public ResponseEntity<Map<String, String>> getWeather(HttpServletRequest request) throws Exception {
+        service.getWeather();
         return new ResponseEntity<Map<String, String>>(service.TEST(), HttpStatus.OK);
     }
 }
