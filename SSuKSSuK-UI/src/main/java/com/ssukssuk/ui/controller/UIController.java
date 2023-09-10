@@ -60,4 +60,12 @@ public class UIController {
         session.invalidate();
         return "index";
     }
+
+
+
+    @RequestMapping(value = "/ws/ws01", method = {RequestMethod.GET, RequestMethod.POST})
+    public String ws01() {
+        logger.debug("request : /ws/ws01");
+        return "ws/ws01";
+    }
 }

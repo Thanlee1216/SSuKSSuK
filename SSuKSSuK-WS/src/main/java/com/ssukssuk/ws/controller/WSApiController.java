@@ -4,6 +4,7 @@ import com.ssukssuk.ws.service.WSApiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,8 +26,8 @@ public class WSApiController {
     }
 
     @RequestMapping(value = "/getWeather", method = {RequestMethod.GET, RequestMethod.POST})
-    public ResponseEntity<Map<String, String>> getWeather(HttpServletRequest request) throws Exception {
-        service.getWeather();
+    public ResponseEntity<Map<String, String>> getWeather(HttpServletRequest request, @RequestBody Map<String, Object> param) throws Exception {
+        service.getWeather(param);
         return new ResponseEntity<Map<String, String>>(service.TEST(), HttpStatus.OK);
     }
 }

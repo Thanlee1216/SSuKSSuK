@@ -46,6 +46,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                     </ul>
                 </li>
                 <li><a href="elements.html">Elements</a></li>
+                <li><a href="/ws/ws01">ws01</a></li>
                 <%
                     if(!"true".equals((String) session.getAttribute("sessionInfo"))) {
                 %>
