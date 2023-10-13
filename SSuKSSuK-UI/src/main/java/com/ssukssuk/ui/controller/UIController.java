@@ -68,4 +68,10 @@ public class UIController {
         logger.debug("request : /ws/ws01");
         return "ws/ws01";
     }
+
+    @RequestMapping(value = "/ootd", method = {RequestMethod.GET, RequestMethod.POST})
+    public String ootd() {
+        logger.debug("request : ootd");
+        return "ootd/ootd";
+    }
 }
