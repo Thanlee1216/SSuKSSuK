@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<spring:eval expression="@environment.getProperty('WS.URL')" var="WS_URL"/>
 <!--
 Landed by HTML5 UP
 html5up.net | @ajlkn
@@ -18,7 +20,49 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script src="js/common.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=946d94f48169090ca5123187383f5626&libraries=services"></script>
 </head>
+<script>
+    // HTML5의 geolocation으로 사용할 수 있는지 확인
+    if (navigator.geolocation) {
+        // GeoLocation을 이용해서 접속 위치를 얻어옵니다
+        navigator.geolocation.getCurrentPosition(function(position) {
+
+            var lat = position.coords.latitude, // 위도
+                lon = position.coords.longitude; // 경도
+
+            getAddr(lat,lon);
+
+        });
+    } else {
+        var locPosition = new kakao.maps.LatLng(33.450701, 126.570667);
+        console.log('geolocation을 사용 불가');
+        getAddr(33.450701,126.570667);
+
+    }
+
+    function getAddr(lat,lng){
+        let geocoder = new kakao.maps.services.Geocoder();
+
+        let coord = new kakao.maps.LatLng(lat, lng);
+        let callback = function(result, status) {
+            if (status === kakao.maps.services.Status.OK) {
+                $("#addr").text(result[0].address.address_name.replace(result[0].address.main_address_no, '').trim())
+                commAjax.request(
+                    "${WS_URL}/WSAPI/getWeather"
+                    , "POST"
+                    , {"lat" : lat, "lng" : lng}
+                    , function (data) {
+                        console.log(data);
+                    }
+                )
+                console.log(result);
+            }
+        }
+        geocoder.coord2Address(coord.getLng(), coord.getLat(), callback);
+    }
+</script>
 <body class="is-preload landing">
 <div id="page-wrapper">
 
@@ -62,49 +106,40 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
         </nav>
     </header>
 
-    <!-- Banner -->
-    <section id="banner">
-        <div class="content">
-            <header>
-                <h2>The future has landed</h2>
-                <p>And there are no hoverboards or flying cars.<br />
-                    Just apps. Lots of mother flipping apps.</p>
-            </header>
-            <span class="image"><img src="images/pic01.jpg" alt="" /></span>
-        </div>
-        <a href="#one" class="goto-next scrolly">Next</a>
-    </section>
-
     <!-- One -->
-    <section id="one" class="spotlight style1 bottom">
-        <span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
+    <section id="banner" class="spotlight style1 bottom">
+<%--        <span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>--%>
         <div class="content">
             <div class="container">
                 <div class="row">
-                    <div class="col-4 col-12-medium">
-                        <header>
-                            <h2>Odio faucibus ipsum integer consequat</h2>
-                            <p>Nascetur eu nibh vestibulum amet gravida nascetur praesent</p>
-                        </header>
+                    <div class="location">
+                        <h1 id="addr"></h1>
                     </div>
-                    <div class="col-4 col-12-medium">
-                        <p>Feugiat accumsan lorem eu ac lorem amet sed accumsan donec.
-                            Blandit orci porttitor semper. Arcu phasellus tortor enim mi
-                            nisi praesent dolor adipiscing. Integer mi sed nascetur cep aliquet
-                            augue varius tempus lobortis porttitor accumsan consequat
-                            adipiscing lorem dolor.</p>
+                    <div class="weather-info">
+                        <div class="today">
+                            <h2>오늘</h2>
+                            <p>-4.4°</p>
+                            <p>맑음</p>
+                        </div>
+                        <div class="tomorrow">
+                            <h2>내일</h2>
+                            <p>-5°</p>
+                            <p>맑음</p>
+                        </div>
+                        <div class="forecast">
+                            <h2>모레</h2>
+                            <p>-4°</p>
+                            <p>맑음</p>
+                        </div>
                     </div>
-                    <div class="col-4 col-12-medium">
-                        <p>Morbi enim nascetur et placerat lorem sed iaculis neque ante
-                            adipiscing adipiscing metus massa. Blandit orci porttitor semper.
-                            Arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer
-                            mi sed nascetur cep aliquet augue varius tempus. Feugiat lorem
-                            ipsum dolor nullam.</p>
+                    <div class="weather-icon">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-cloud"></i>
                     </div>
                 </div>
             </div>
         </div>
-        <a href="#two" class="goto-next scrolly">Next</a>
+<%--        <a href="#two" class="goto-next scrolly">Next</a>--%>
     </section>
 
     <!-- Two -->
