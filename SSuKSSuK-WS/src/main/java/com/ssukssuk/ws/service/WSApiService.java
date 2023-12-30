@@ -31,7 +31,7 @@ public class WSApiService {
         return repository.TEST();
     }
 
-    public void getWeather(Map<String, Object> param) throws Exception {
+    public Map<String, Object> getWeather(Map<String, Object> param) throws Exception {
         //RestTemplate으로 연결할 URL 생성(쿼리 스트링을 이용한 GET 방식)
         StringBuilder urlBuilder = new StringBuilder("http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst"); /*URL*/
         urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=" + serviceKey); /*Service Key*/
@@ -46,6 +46,6 @@ public class WSApiService {
         RestTemplate restTemplate = new RestTemplate();
 
         ResponseEntity<Map> response = restTemplate.getForEntity(urlBuilder.toString(), Map.class);
-        Map<String,Object> body = response.getBody();
+        return response.getBody();
     }
 }

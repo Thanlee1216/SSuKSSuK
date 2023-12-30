@@ -26,8 +26,7 @@ public class WSApiController {
     }
 
     @RequestMapping(value = "/getWeather", method = {RequestMethod.GET, RequestMethod.POST})
-    public ResponseEntity<Map<String, String>> getWeather(HttpServletRequest request, @RequestBody Map<String, Object> param) throws Exception {
-        service.getWeather(param);
-        return new ResponseEntity<Map<String, String>>(service.TEST(), HttpStatus.OK);
+    public ResponseEntity<Map<String, Object>> getWeather(HttpServletRequest request, @RequestBody Map<String, Object> param) throws Exception {
+        return new ResponseEntity<Map<String, Object>>(service.getWeather(param), HttpStatus.OK);
     }
 }
