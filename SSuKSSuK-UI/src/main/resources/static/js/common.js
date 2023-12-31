@@ -25,3 +25,7 @@ let commAjax = {
         });
     }
 }
+
+function goMenu(menu) {
+    location.href = menu;
+}
