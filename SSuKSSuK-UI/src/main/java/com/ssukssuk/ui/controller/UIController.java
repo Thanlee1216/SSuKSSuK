@@ -50,7 +50,7 @@ public class UIController {
     @RequestMapping(value = "/login", method = {RequestMethod.GET, RequestMethod.POST})
     public String login() {
         logger.debug("request : login");
-        return "login/login";
+        return "user/user";
     }
 
     @RequestMapping(value = "/logout", method = {RequestMethod.GET, RequestMethod.POST})
@@ -59,5 +59,30 @@ public class UIController {
         HttpSession session = request.getSession();
         session.invalidate();
         return "index";
+    }
+
+
+
+    @RequestMapping(value = "/ws/ws01", method = {RequestMethod.GET, RequestMethod.POST})
+    public String ws01() {
+        logger.debug("request : /ws/ws01");
+        return "ws/ws01";
+    }
+
+    @RequestMapping(value = "/ootd", method = {RequestMethod.GET, RequestMethod.POST})
+    public String ootd() {
+        logger.debug("request : ootd");
+        return "ootd/ootd";
+    }
+
+    @RequestMapping(value = "/board", method = {RequestMethod.GET, RequestMethod.POST})
+    public String board(){
+
+        return "board/boardList";
+    }
+    @RequestMapping(value = "/board/detail", method = {RequestMethod.GET, RequestMethod.POST})
+    public String boardDetail(){
+
+        return "board/detail";
     }
 }

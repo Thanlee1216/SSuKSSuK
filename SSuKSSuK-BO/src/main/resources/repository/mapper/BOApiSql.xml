@@ -5,8 +5,46 @@
 
 <mapper namespace="com.ssukssuk.bo.repository.BOApiRepository">
 
-
-    <select id="TEST" parameterType="hashmap" resultType="hashmap">
-        SELECT 'test' AS TEXT from DUAL
+    <select id="boardList" parameterType="hashmap" resultType="hashmap">
+        SELECT
+            BOARD_NO        as boardNo          /* 게시판 순번 */
+            ,USER_ID        as userId           /* 유저 ID */
+            ,BOARD_TITLE    as boardTitle       /* 게시판 제목 */
+        FROM BOARD
+        ORDER BY BOARD_NO DESC
     </select>
+
+    <select id="boardDetail" parameterType="hashmap" resultType="hashmap">
+        SELECT
+            BOARD_NO        as boardNo          /* 게시판 순번 */
+            ,USER_ID        as userId           /* 유저 ID */
+            ,BOARD_TITLE    as boardTitle       /* 게시판 제목 */
+            ,BOARD_CONTENT  as boardContent     /* 게시판 내용 */
+        FROM BOARD
+        WHERE BOARD_NO = #{boardNo}
+    </select>
+
+    <insert id="boardWrite" parameterType="BOApiVO">
+        INSERT INTO BOARD(
+            USER_ID
+            , BOARD_TITLE
+            , BOARD_CONTENT
+            )VALUES (
+            #{userId}
+            , #{boardTitle}
+            , #{boardContent}
+            )
+    </insert>
+    <update id="boardUpdate" parameterType="BOApiVO">
+        UPDATE BOARD
+        SET BOARD_TITLE = #{boardTitle}
+          , BOARD_CONTENT = #{boardContent}
+        WHERE BOARD_NO = #{boardNo} AND USER_ID = #{userId};
+    </update>
+
+    <delete id="boardDelete" parameterType="BOApiVO">
+        DELETE FROM BOARD
+               WHERE BOARD_NO = #{boardNo}
+                 AND USER_ID = #{userId};
+    </delete>
 </mapper>

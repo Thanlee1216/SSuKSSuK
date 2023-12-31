@@ -29,5 +29,6 @@
     <typeAliases>
         <typeAlias alias="ArrayList" 			  	    type="java.util.ArrayList"/>
         <typeAlias alias="String[]" 				    type="[Ljava.lang.String;" />
+        <typeAlias alias="BOApiVO" 				    type="com.ssukssuk.bo.model.BOApiVO" />
     </typeAliases>
 </configuration>

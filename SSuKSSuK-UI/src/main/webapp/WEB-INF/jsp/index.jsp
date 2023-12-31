@@ -49,6 +49,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 <%
                     if(!"true".equals((String) session.getAttribute("sessionInfo"))) {
                 %>
+                <li><a href="/ootd">Ootd</a></li>
+                <li><a href="/board">Borad</a></li>
                 <li><a href="/login" class="button primary">Sign In</a></li>
                 <%
                     }else {
